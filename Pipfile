@@ -11,6 +11,7 @@ tox-travis = "*"
 black = "*"
 flake8 = "*"
 codecov = "*"
+pytest-cov = "*"
 
 [packages]
 flask = "*"
