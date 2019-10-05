@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from flask import Flask, render_template
 
-from spell_check import commands
+from spell_check import commands, main
 from spell_check.extensions import bootstrap
 
 
@@ -17,6 +17,7 @@ def create_app(config_object: str = "spell_check.settings") -> Flask:
     app = Flask(__name__.split(".")[0])
     app.config.from_object(config_object)
     register_extensions(app)
+    register_blueprints(app)
     register_errorhandlers(app)
     register_shellcontext(app)
     register_commands(app)
@@ -27,6 +28,12 @@ def create_app(config_object: str = "spell_check.settings") -> Flask:
 def register_extensions(app):
     """Register Flask extensions."""
     bootstrap.init_app(app)
+    return None
+
+
+def register_blueprints(app):
+    """Register Flask blueprints."""
+    app.register_blueprint(main.views.blueprint)
     return None
 
 
