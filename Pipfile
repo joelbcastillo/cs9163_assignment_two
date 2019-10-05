@@ -15,6 +15,8 @@ codecov = "*"
 [packages]
 flask = "*"
 python-dotenv = "*"
+flask-marshmallow = "*"
+environs = "*"
 
 [requires]
 python_version = "3.7"
