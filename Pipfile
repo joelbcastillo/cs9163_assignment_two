@@ -8,9 +8,20 @@ pipfile-requirements = "*"
 pytest = "*"
 tox = "*"
 tox-travis = "*"
+black = "*"
+flake8 = "*"
+codecov = "*"
+pytest-cov = "*"
 
 [packages]
 flask = "*"
+python-dotenv = "*"
+flask-marshmallow = "*"
+environs = "*"
+flask-bootstrap = "*"
 
 [requires]
 python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true
