@@ -10,7 +10,7 @@ matrix:
       dist: xenial
 install:
   - pip install pipenv
-  - pipenv install --devs
+  - pipenv install --dev
 before_script:
   - flask lint
 script: 
