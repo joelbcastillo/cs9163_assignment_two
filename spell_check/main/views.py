@@ -8,4 +8,4 @@ blueprint = Blueprint("main", __name__, static_folder="../static", static_url_pa
 
 @blueprint.route("/")
 def main():
-    return render_template('main/home.html')
+    return render_template("main/home.html")
