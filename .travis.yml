@@ -11,7 +11,7 @@ matrix:
 install:
   - pip install pipenv
   - pipenv install --devs
-before_script:s
+before_script:
   - flask lint
 script: 
   - pytest --cov=spell_check
