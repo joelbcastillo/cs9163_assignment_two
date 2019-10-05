@@ -2,6 +2,7 @@
 from flask import Flask, render_template
 
 from spell_check import commands
+from spell_check.extensions import bootstrap
 
 
 def create_app(config_object: str = "spell_check.settings") -> Flask:
@@ -15,11 +16,18 @@ def create_app(config_object: str = "spell_check.settings") -> Flask:
     """
     app = Flask(__name__.split(".")[0])
     app.config.from_object(config_object)
+    register_extensions(app)
     register_errorhandlers(app)
     register_shellcontext(app)
     register_commands(app)
 
     return app
+
+
+def register_extensions(app):
+    """Register Flask extensions."""
+    bootstrap.init_app(app)
+    return None
 
 
 def register_errorhandlers(app: Flask):
@@ -40,7 +48,7 @@ def register_shellcontext(app: Flask):
 
     def shell_context():
         """Shell context objects."""
-        return {"User": user.models.User}
+        return None
 
     app.shell_context_processor(shell_context)
 

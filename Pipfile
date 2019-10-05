@@ -17,6 +17,7 @@ flask = "*"
 python-dotenv = "*"
 flask-marshmallow = "*"
 environs = "*"
+flask-bootstrap = "*"
 
 [requires]
 python_version = "3.7"
