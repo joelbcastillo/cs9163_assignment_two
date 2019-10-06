@@ -10,7 +10,7 @@ def create_app(config_object: str = "spell_check.settings") -> Flask:
 
     Args:
         config_object (str, optional): The configuration object to use. Defaults to "spell_check.settings".
-    
+
     Returns:
         Flask: An instance of a Flask application
     """
