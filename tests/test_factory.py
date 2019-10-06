@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from spell_check.app import create_app
 from tests import settings
 
