@@ -20,6 +20,11 @@ def app():
 
 
 @pytest.fixture
+def client(app):
+    return app.test_client()
+
+
+@pytest.fixture
 def testapp(app):
     """A Webtest app."""
     return TestApp(app)
