@@ -48,5 +48,5 @@ waitress==1.3.1
 wcwidth==0.1.7
 webob==1.8.5
 webtest==2.0.33
-wheel==0.33.6
+wheel==0.38.1
 zipp==0.6.0
